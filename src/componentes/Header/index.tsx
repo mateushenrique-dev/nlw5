@@ -1,6 +1,6 @@
 import format from 'date-fns/format';
 import ptBR from 'date-fns/locale/pt-BR'
-
+import Link from 'next/link'
 import styles from './styles.module.scss'
 
 export default function Header() {
@@ -10,7 +10,9 @@ export default function Header() {
 
   return (
     <header className={styles.headerContainer}>
-      <img src="/logo.svg" alt="Poscastr"/>
+      <Link href="/">
+        <button><img src="/logo.svg" alt="Poscastr"/></button>
+      </Link>
       <p>O melhor para você ouvir, sempre</p>
       <span>{currentDate}</span>
     </header>

@@ -16,4 +16,11 @@
     margin-left: auto;
     text-transform: capitalize;
   }
+
+  button {
+    cursor: pointer;
+    background: none;
+    border: none;
+    outline: none;
+  }
 }

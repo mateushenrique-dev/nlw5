@@ -8,6 +8,8 @@ import { convertDurationToTimeString } from '../../utils/convertDurationToTimeSt
 import styles from './episode.module.scss'
 import Image from 'next/image'
 import { usePlayer } from '../../contexts/PlayerContext'
+import React from 'react'
+import Head from 'next/head'
 
 type Episode = {
   id: string,
@@ -31,6 +33,9 @@ export default function Episode({ episode }: EpisodeProps) {
 
   return (
     <div className={styles.episodes}>
+      <Head>
+        <title>{episode.title} | Podcastr</title>
+      </Head>
       <div className={styles.thumbnailContainer}>
         <Link href="/">
           <button type="button">
@@ -69,7 +74,6 @@ export const getStaticPaths: GetStaticPaths = async () => {
 }
 
 export const getStaticProps: GetStaticProps = async (ctx) => {
-  const { playList } = usePlayer()
 
   const { slug } = ctx.params
   const { data } = await api.get(`/episodes/${slug}`)
