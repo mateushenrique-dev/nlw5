@@ -1,5 +1,5 @@
 import axios from 'axios'
 
 export const api = axios.create({
-  baseURL: 'http://localhost:3333/'
+  baseURL: 'https://solrachix-json-api.herokuapp.com/v1/mateushenrique-dev/podcastr/'
 })
