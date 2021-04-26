@@ -16,15 +16,15 @@
 }
 
 @media (max-width: 1080px) {
-    html {
-        font-size: 93.75%;
-    }
+  html {
+    font-size: 93.75%;
+  }
 }
 
 @media (max-width: 720pxpx) {
-    html {
-        font-size: 87.5%;
-    }
+  html {
+    font-size: 87.5%;
+  }
 }
 
 * {
@@ -37,25 +37,75 @@ body {
   background: var(--gray-50);
 }
 
-body, input, textarea, button {
-    font: 500 1rem Inter, sans-serif;
-    color: var(--gray-500);
+body,
+input,
+textarea,
+button {
+  font: 500 1rem Inter, sans-serif;
+  color: var(--gray-500);
 }
 
 h1 {
-    font-size: 2rem;
+  font-size: 2rem;
 }
 
 h2 {
-    font-size: 1.5rem;
+  font-size: 1.5rem;
 }
 
-h1, h2, h3, h4, h5, h6 {
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
   font-weight: 600;
-  font-family: 'Lexend', sans-serif;
+  font-family: "Lexend", sans-serif;
   color: var(--gray-800);
 }
 
 button {
-    cursor: pointer;
+  cursor: pointer;
+}
+
+.dark {
+  
+  background: #131f33;
+
+  p, a, span {
+    color: #cfd2d6 !important;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    color: #Acb1b8;
+  }
+
+  td, tr {
+    color: #Acb1b8;
+  }
+
+  td, th {
+    border-bottom: 1px solid #1e293c !important;
+  }
+
+  table td button {
+    background: #1e293c !important;
+    border-color: #1e293c !important;
+  }
+
+  li {
+    background: #1e293c !important;
+    border-color: #1e293c !important;
+
+    button {
+      background: #131f33 !important;
+      border-color: #131f33 !important;
+    }
+  }
+
+  & > main > header {
+    background: #1e293c;
+    border-bottom-color: transparent;
+  }
+
 }
